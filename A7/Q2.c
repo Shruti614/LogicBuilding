@@ -1,11 +1,11 @@
-/*Write a program which accept number from user and return the count of even digits.
+/*Write a program which accept number from user and return the count of odd digits.
 Input: 2395     1018       -1018    8462
-Output: 1       2           2       4
+Output: 3       2           2       0
 */
 
 #include<stdio.h>
 
-int CountEven(int iNo)
+int CountOdd(int iNo)
 {
     int iDigit=0,iCnt=0;
 
@@ -17,7 +17,7 @@ int CountEven(int iNo)
     while(iNo>0)
     {
         iDigit=iNo%10;
-        if((iDigit%2)==0)
+        if((iDigit%2)!=0)
         {
             iCnt++;
         }
@@ -27,14 +27,14 @@ int CountEven(int iNo)
 }
 int main()
 {
-    int iValue=0;
-    int iRet=0;
+    int iValue=0,iRet=0;
 
-    printf("Enter number:\n");
+    printf("Enter number: \n");
     scanf("%d",&iValue);
 
-    iRet=CountEven(iValue);
+    iRet=CountOdd(iValue);
 
     printf("%d\n",iRet);
+
     return 0;
 }
